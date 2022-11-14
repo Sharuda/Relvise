@@ -88,6 +88,10 @@ body {
   color: #737373;
   font-weight: 600;
 }
+.site-nav-header .link-site-nav:hover,
+.site-nav-header .link-site-nav:focus {
+  text-decoration: underline;
+}
 /* hero */
 .hero {
   position: relative;
@@ -117,7 +121,7 @@ body {
   display: flex;
   margin-top: 35px;
 }
-.button {
+.button-hero {
   border-radius: 37px;
   font-weight: 700;
   font-size: 14px;
@@ -131,12 +135,28 @@ body {
 
   background: #ff7b47;
   color: #ffffff;
+
+  transition: background-color 350ms, color 350ms;
 }
 .secondary-button {
   padding: 10px 36px;
   border: 1px solid #0d5c63;
   color: #0d5c63;
+  background-color: transparent;
+
+  transition: background-color 350ms, color 350ms;
 }
+.primary-button:hover,
+.primary-button:focus {
+  background-color: #ffffff;
+  color: #ff7b47;
+}
+.secondary-button:hover,
+.secondary-button:focus {
+  background-color: #0d5c63;
+  color: #ffffff;
+}
+
 .container-image {
   position: absolute;
   width: 100%;
@@ -280,6 +300,10 @@ body {
   letter-spacing: 0.1px;
   color: inherit;
 }
+.practice .subtitle:hover,
+.practice .subtitle:focus {
+  text-decoration: underline;
+}
 .practice .item {
   flex: 0 1 22.82%;
 }
@@ -386,6 +410,12 @@ body {
   min-height: 58px;
   color: #ffffff;
   cursor: pointer;
+
+  transition: background-color 350ms;
+}
+.button:hover,
+.button:focus {
+  background-color: #ca6137;
 }
 /* contacts */
 .list-contacts {
@@ -397,11 +427,20 @@ body {
   padding: 80px 40px;
   background-color: #252b42;
   text-align: center;
+  color: #ffffff;
 }
-.icon-contacts{
+
+.list-contacts > .item:hover {
+  background-color: #0d5c63;
+  animation: bigItem 350ms;
+  animation-fill-mode: forwards;
+}
+.icon-contacts {
   display: block;
   margin: 0 auto;
+  fill: currentColor;
 }
+
 .mail {
   display: block;
   margin-top: 15px;
@@ -427,6 +466,7 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
+
 /* contact us */
 .section-contact-us {
   padding: 40px 0;
@@ -489,9 +529,10 @@ body {
   align-items: center;
 }
 .icon-contact {
-  align-self: center;
-  margin-right: 10px;
   display: block;
+  margin-right: 10px;
+
+  fill: currentColor;
 }
 /* footer */
 .container-footer {
@@ -503,6 +544,21 @@ body {
 .socials {
   display: flex;
 }
-.socials > .item:not(:last-child){
-margin-right: 20px;
+.socials > .item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* animation */
+@keyframes bigItem {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1.25);
+  }
 }
