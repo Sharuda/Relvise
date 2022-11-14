@@ -398,6 +398,10 @@ body {
   background-color: #252b42;
   text-align: center;
 }
+.icon-contacts{
+  display: block;
+  margin: 0 auto;
+}
 .mail {
   display: block;
   margin-top: 15px;
@@ -470,6 +474,7 @@ body {
   letter-spacing: 0.1px;
   color: #ffffff;
 }
+
 .item-nav:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -479,7 +484,25 @@ body {
   line-height: calc(24 / 14);
   color: #ffffff;
 }
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+.icon-contact {
+  align-self: center;
+  margin-right: 10px;
+  display: block;
+}
 /* footer */
 .container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px 0;
+}
+.socials {
+  display: flex;
+}
+.socials > .item:not(:last-child){
+margin-right: 20px;
 }
