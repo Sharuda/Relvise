@@ -492,9 +492,15 @@ body {
   font-weight: 700;
   line-height: calc(28 / 14);
   color: #ffffff;
-  background: #ff7b47;
+  background-color: #ff7b47;
   border-radius: 5px;
   cursor: pointer;
+
+  transition: background-color 350ms;
+}
+.button-contact-us:hover,
+.button-contact-us:focus {
+  background-color: #ca6137;
 }
 /* navigation-footer */
 .section-navigaton {
@@ -524,6 +530,10 @@ body {
   line-height: calc(24 / 14);
   color: #ffffff;
 }
+.link-nav:hover,
+.link-nav:focus{
+  text-decoration: underline;
+}
 .contact-item {
   display: flex;
   align-items: center;
@@ -552,10 +562,6 @@ body {
 @keyframes bigItem {
   0% {
     transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.25);
   }
 
   100% {
